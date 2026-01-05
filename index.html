@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Physik Lernapp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="left">
+      <strong class="logo">Physik</strong>
+      <button id="startBtn">Start</button>
+      <button id="theoryBtn">Theorie</button>
+      <button id="tasksBtn">Aufgaben</button>
+    </div>
+
+    <div class="right">
+      <select id="gradeSelect">
+        <option value="7">Klasse 7</option>
+        <option value="8" selected>Klasse 8</option>
+        <option value="9">Klasse 9</option>
+        <option value="10">Klasse 10</option>
+      </select>
+      <button id="themeToggle">🌙</button>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main>
+    <p class="week">Aktuelle Woche: <span id="currentWeek"></span></p>
+
+    <!-- START -->
+    <section id="start" class="page active">
+      <h2>Willkommen</h2>
+      <p>Wähle oben Theorie oder Aufgaben.</p>
+    </section>
+
+    <!-- THEORIE -->
+    <section id="theory" class="page">
+      <h2>Theorie</h2>
+      <div id="theoryBox"></div>
+    </section>
+
+    <!-- AUFGABEN -->
+    <section id="tasks" class="page">
+      <h2>Aufgaben</h2>
+      <div id="taskBox"></div>
+    </section>
+  </main>
+
+ <script src="./script.js" defer></script>
+</body>
+</html>
+<div class="progress">
+  <div id="progressBar"></div>
+</div>
+<p id="progressText"></p>
+
+<div id="taskBox"></div>

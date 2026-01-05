@@ -1,0 +1,220 @@
+/* ==========================
+   BASIS
+========================== */
+* {
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f6f7f9;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* ==========================
+   DARK MODE
+========================== */
+body.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+/* ==========================
+   HEADER
+========================== */
+header {
+  background: #111827;
+  color: #f9fafb;
+  padding: 20px 24px;
+  border-bottom: 1px solid #1f2937;
+}
+
+header h1 {
+  margin: 0 0 12px 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ==========================
+   CONTROLS
+========================== */
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+select,
+button {
+  background: #1f2937;
+  color: #f9fafb;
+  border: 1px solid #374151;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+select:focus,
+button:focus {
+  outline: none;
+  border-color: #9ca3af;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+nav button {
+  background: transparent;
+  border: 1px solid #374151;
+  color: #e5e7eb;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav button:hover {
+  background: #1f2937;
+}
+
+/* ==========================
+   WEEK INFO
+========================== */
+header p {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* ==========================
+   CARDS (THEORIE & AUFGABEN)
+========================== */
+.page h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#theoryContent,
+#taskArea {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px 22px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Dark Mode Cards */
+body.dark #theoryContent,
+body.dark #taskArea {
+  background: #020617;
+  box-shadow: none;
+  border: 1px solid #1f2937;
+}
+
+/* ==========================
+   INPUT & TASKS
+========================== */
+#taskArea input {
+  margin-top: 12px;
+  padding: 8px 10px;
+  width: 220px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.9rem;
+}
+
+body.dark #taskArea input {
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+}
+
+#taskArea button {
+  margin-top: 10px;
+  padding: 7px 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* ==========================
+   FEEDBACK & SOLUTION
+========================== */
+#feedback {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+#solution {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  font-size: 0.9rem;
+}
+
+body.dark #solution {
+  background: #020617;
+  border: 1px solid #334155;
+}
+.topbar .left button {
+  margin-right: 10px;
+}
+
+.topbar .right button,
+.topbar .right select {
+  margin-left: 10px;
+}
+#gradeSelect {
+  margin-top: 6px;
+}
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+body.dark .progress {
+  background: #2a2a2a;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #4f46e5;
+  transition: width 0.3s ease;
+}
+
+body.dark #progressBar {
+  background: #818cf8;
+}
+
+#progressText {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
